@@ -283,7 +283,7 @@ export default function Signup() {
           {/* Google OAuth */}
           <button
             type="button"
-            onClick={() => { window.location.href = `${(import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace(/\/api$/, '')}/api/auth/google`; }}
+            onClick={() => { window.location.href = `${(import.meta.env.VITE_API_URL || 'http://localhost:5000/api').trim().replace(/\/+$/, '').replace(/\/api$/, '')}/api/auth/google`; }}
             className="mt-4 w-full flex items-center justify-center gap-3 py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-medium text-sm hover:bg-gray-50 dark:hover:bg-gray-750 hover:border-gray-300 dark:hover:border-gray-600 transition-all shadow-sm"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
