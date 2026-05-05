@@ -4,7 +4,9 @@ let socket = null;
 
 export const initSocket = (token) => {
   if (socket) socket.disconnect();
-  socket = io(window.location.origin, {
+  const apiUrl = import.meta.env.VITE_API_URL || window.location.origin;
+  const socketUrl = apiUrl.replace(/\/api$/, '');
+  socket = io(socketUrl, {
     auth: { token },
     transports: ['websocket', 'polling'],
   });
