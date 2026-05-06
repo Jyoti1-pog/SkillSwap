@@ -8,9 +8,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
-const passport = require('passport');
 const authRoutes = require('./routes/auth');
-const googleAuthRoutes = require('./routes/googleAuth');
 const userRoutes = require('./routes/users');
 const skillRoutes = require('./routes/skills');
 const matchRoutes = require('./routes/matches');
@@ -61,9 +59,7 @@ const authLimiter = rateLimit({
   message: { error: 'Too many auth attempts, please try again later.' },
 });
 
-app.use(passport.initialize());
 app.use('/api/auth', authLimiter, authRoutes);
-app.use('/api/auth/google', googleAuthRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/matches', matchRoutes);

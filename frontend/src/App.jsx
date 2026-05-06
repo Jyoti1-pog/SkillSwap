@@ -12,7 +12,6 @@ import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
-import GoogleSuccess from './pages/auth/GoogleSuccess';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/dashboard/Dashboard';
 import Discover from './pages/dashboard/Discover';
@@ -60,7 +59,6 @@ export default function App() {
         <Route path="/auth/signup" element={<PublicRoute><Signup /></PublicRoute>} />
         <Route path="/auth/forgot-password" element={<ForgotPassword />} />
         <Route path="/auth/reset-password" element={<ResetPassword />} />
-        <Route path="/auth/google/success" element={<GoogleSuccess />} />
 
         {/* Onboarding */}
         <Route path="/onboarding" element={<ProtectedRoute><Onboarding /></ProtectedRoute>} />
