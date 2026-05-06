@@ -244,19 +244,6 @@ export default function Login() {
             </Link>
           </div>
 
-          {/* Demo credentials */}
-          <div className="mt-8 p-4 rounded-2xl bg-brand-50 dark:bg-brand-950/40 border border-brand-100 dark:border-brand-900/50">
-            <div className="flex items-center gap-2 mb-2">
-              <svg className="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-xs font-semibold text-brand-700 dark:text-brand-300">Demo credentials</span>
-            </div>
-            <div className="space-y-1 text-xs text-brand-600 dark:text-brand-400 font-mono">
-              <p>User: alex@seed.skillswap.com / Password123!</p>
-              <p>Admin: admin@skillswap.com / Admin123!</p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>
